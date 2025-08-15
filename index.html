@@ -14,28 +14,28 @@
       color: white;
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin-top: 20px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
     }
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       max-width: 600px;
       margin: 10px auto 20px;
       line-height: 1.4;
     }
     .video-container {
-      max-width: 900px;
+      max-width: 400px;
       margin: 20px auto;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      background: black;
     }
-    video {
+    .video-container iframe {
       width: 100%;
       height: auto;
-      display: block;
-      background: black;
+      aspect-ratio: 9 / 16;
     }
     .buy-btn {
       display: inline-block;
@@ -48,27 +48,35 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: shake 1s infinite;
       transition: all 0.3s ease;
     }
     .buy-btn:hover {
       background: #00994d;
       transform: scale(1.05);
     }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-5px); }
+      40% { transform: translateX(5px); }
+      60% { transform: translateX(-5px); }
+      80% { transform: translateX(5px); }
+    }
   </style>
 </head>
 <body>
 
   <h1>Buy This Course Now!</h1>
-  <p>Abhi sirf ₹99 me, is course ko le lo aur paisa kamaane ka silsila shuru karo! 🔥</p>
+  <p>Abhi course le lo aur earning start karo! 🔥</p>
 
   <div class="video-container">
-    <video controls playsinline>
-      <source src="YOUR_VIDEO_URL.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="sp-embed-player" data-id="cTjoIpn2b2Y">
+      <script src="https://go.screenpal.com/player/appearance/cTjoIpn2b2Y"></script>
+      <iframe style="border:0;" scrolling="no" src="https://go.screenpal.com/player/cTjoIpn2b2Y?ff=1&title=0" allowfullscreen="true"></iframe>
+    </div>
   </div>
 
-  <a href="javascript:void(0)" class="buy-btn" onclick="closeAndReturn()">Buy Now for ₹99</a>
+  <a href="javascript:void(0)" class="buy-btn" onclick="closeAndReturn()">BUY YOUR COURSE 😎</a>
 
   <script>
     function closeAndReturn() {
