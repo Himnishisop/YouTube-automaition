@@ -1,88 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy This Course</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffcc00, #ff6600);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: white;
-    }
-    h1 {
-      font-size: 2.2em;
-      margin-top: 20px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    }
-    p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 10px auto 20px;
-      line-height: 1.4;
-    }
-    .video-container {
-      max-width: 400px;
-      margin: 20px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      background: black;
-    }
-    .video-container iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 9 / 16;
-    }
-    .buy-btn {
-      display: inline-block;
-      margin: 25px auto;
-      padding: 15px 30px;
-      background: #00cc66;
-      color: white;
-      font-size: 1.5em;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      animation: shake 1s infinite;
-      transition: all 0.3s ease;
-    }
-    .buy-btn:hover {
-      background: #00994d;
-      transform: scale(1.05);
-    }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20% { transform: translateX(-5px); }
-      40% { transform: translateX(5px); }
-      60% { transform: translateX(-5px); }
-      80% { transform: translateX(5px); }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Access</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #4B0082, #2E0854); /* Bold Purple Gradient */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 144.44%; /* 9:20 ratio */
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+  }
+
+  .features {
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .features li {
+    margin-bottom: 8px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto 0;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    animation: shake 1.2s infinite;
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+  }
+</style>
 </head>
 <body>
 
-  <h1>Buy This Course Now!</h1>
-  <p>Abhi course le lo aur earning start karo! 🔥</p>
+<h1>🔥 Exclusive Course Access</h1>
+<p>Master YouTube Automation for just ₹99 🚀</p>
 
-  <div class="video-container">
-    <div class="sp-embed-player" data-id="cTjoIpn2b2Y">
-      <script src="https://go.screenpal.com/player/appearance/cTjoIpn2b2Y"></script>
-      <iframe style="border:0;" scrolling="no" src="https://go.screenpal.com/player/cTjoIpn2b2Y?ff=1&title=0" allowfullscreen="true"></iframe>
-    </div>
-  </div>
+<div class="video-container">
+  <iframe src="https://go.screenpal.com/player/cTjoIpn2b2Y?width=100%&height=100%&ff=1&title=0" allowfullscreen></iframe>
+</div>
 
-  <a href="javascript:void(0)" class="buy-btn" onclick="closeAndReturn()">BUY YOUR COURSE 😎</a>
+<ul class="features">
+  <li>🔥 100% Practical YouTube Growth Strategy</li>
+  <li>🚀 AI Tools से Automatic Video Creation</li>
+  <li>💰 Zero Investment से High Income Model</li>
+  <li>🎯 Step-by-Step Easy Guide for Beginners</li>
+  <li>⏳ सिर्फ 30 Minutes में पूरा सीखो</li>
+  <li>📈 Lifetime Access + Future Updates Free</li>
+</ul>
 
-  <script>
-    function closeAndReturn() {
-      window.open('', '_self').close(); 
-    }
-  </script>
+<button class="btn" onclick="closeWindow()">🔥 BUY YOUR COURSE</button>
+
+<script>
+function closeWindow() {
+    window.open('', '_self').close();
+}
+</script>
 
 </body>
 </html>
